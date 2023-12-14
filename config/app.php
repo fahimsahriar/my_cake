@@ -74,10 +74,12 @@ return [
      *   The salt value is also used as the encryption key.
      *   You should treat it as extremely sensitive data.
      */
+    // 'Security' => [
+    //     'salt' => env('SECURITY_SALT'),
+    // ],
     'Security' => [
-        'salt' => env('SECURITY_SALT'),
+        'salt' => env('SECURITY_SALT', 'dfc123c6c22d84f4bc12273f3df67c6ae55009696e4126b36ac2f755778faccc'),
     ],
-
     /*
      * Apply timestamps with the last modified time to static assets (js, css, images).
      * Will append a querystring parameter containing the time the file was modified.
